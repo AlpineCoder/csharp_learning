@@ -5,6 +5,11 @@ namespace MyAPI.Data
 {
     public class MockCommanderRepo : ICommanderRepo
     {
+        public void CreateCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>
@@ -18,7 +23,12 @@ namespace MyAPI.Data
 
         public Command GetCommandById(int id)
         {
-            return new Command{Id=0, HowTo="Boil an egg", Line="Just cook it", Platform="Kitchen"};
+            return new Command { Id = 0, HowTo = "Boil an egg", Line = "Just cook it", Platform = "Kitchen" };
+        }
+
+        public bool SaveChanges()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
